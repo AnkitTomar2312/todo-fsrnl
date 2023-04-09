@@ -1,13 +1,17 @@
 import React from "react";
 import Card from "../Card/Card";
-import TaskList from "./TaskList";
 import "./Tasks.css";
-export default function Tasks({ props }) {
+export default function Tasks({ tasks }) {
   return (
     <div>
-      <Card className="tasks">
-        <TaskList items={props.tasks} />
-      </Card>
+      {tasks.map((item, index) => {
+        return (
+          <div key={index}>
+            <h1>{item.title}</h1>
+            <p>{item.status}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

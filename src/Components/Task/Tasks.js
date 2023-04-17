@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "../Card/Card";
-import "./Tasks.css";
+
 export default function Tasks({ tasks }) {
   return (
     <div>
+      <h1>Tasks</h1>
       {tasks.map((item, index) => {
         return (
           <div key={index}>

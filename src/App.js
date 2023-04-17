@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Tasks from "./Components/Tasks/Tasks";
+import Tasks from "./Components/Task/Tasks";
 
 const Dummy_Task = [
   {
@@ -23,6 +23,7 @@ const Dummy_Task = [
 ];
 function App() {
   const [task, setTask] = useState(Dummy_Task);
+
   return (
     <div className="App">
       <Tasks tasks={task} />
